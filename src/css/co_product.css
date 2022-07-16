@@ -1,0 +1,31 @@
+.cop {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cop_image {
+    object-fit: contain;
+    width: 180px;
+}
+
+.cop_info {
+    padding-left: 20px;
+}
+
+.cop_info > button {
+    background: #f90;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a87 #973 #862;
+    color: #111;
+}
+
+.cop_title {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.cop_rating {
+    display: flex;
+}
