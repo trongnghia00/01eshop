@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/checkout.css';
 import CheckoutProduct from "./co_product";
+import Total from "./total";
 
 
 const Checkout = () => {
@@ -18,7 +19,7 @@ const Checkout = () => {
         </div>
       </div>
       <div className="checkout_right">
-        Total
+        <Total />
       </div>
     </div>
   );
