@@ -12,7 +12,8 @@ const Product = (props) => {
                 id: props.id,
                 image: props.image,
                 price: props.price,
-                rating: props.rating
+                rating: props.rating,
+                title: props.title
             }
         });
     }
