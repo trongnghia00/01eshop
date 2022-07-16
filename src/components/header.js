@@ -7,7 +7,11 @@ import SearchIcon from '@mui/icons-material/Search';
 
 import { NavLink } from 'react-router-dom';
 
+import { useDataValue } from "../utils/dataprovider";
+
 const Header = () => {
+    const [state, dispatch] = useDataValue();
+
     return(
         <div className="header">
             <NavLink to="/" style={{textDecoration: "none"}}>
@@ -32,7 +36,7 @@ const Header = () => {
                 <NavLink to="/checkout" style={{textDecoration:"none"}}>
                     <div className="nav_itemBasket">
                         <ShoppingBasketIcon fontSize="large"/>
-                        <span className="nav_itemLineTwo nav_backetCount">0</span>
+                        <span className="nav_itemLineTwo nav_backetCount">{state.basket.length}</span>
                     </div>
                 </NavLink>
             </div>
