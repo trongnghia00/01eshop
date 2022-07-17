@@ -1,7 +1,16 @@
 import React from "react";
 import '../css/co_product.css';
+import  { useDataValue } from '../utils/dataprovider';
 
 const CheckoutProduct = (props) => {
+  const [state, dispatch] = useDataValue();
+
+  const removeFromCart = () => {
+    dispatch({
+      type: 'REMOVE_FROM_CART',
+      id: props.id
+    });
+  }
   return (
     <div className="cop">
       <img src={props.image} alt="" className="cop_image" />
@@ -20,7 +29,7 @@ const CheckoutProduct = (props) => {
           ))
         }
         </div>
-        <button>Xóa khỏi giỏ hàng</button>
+        <button onClick={removeFromCart}>Xóa khỏi giỏ hàng</button>
       </div>
     </div>
   );
